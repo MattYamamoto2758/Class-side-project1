@@ -1,8 +1,8 @@
 starterHP = 23
 starter_attack = 10
 
-opp_starterHP = 23
-opp_starter_attack = 10
+opp_starterHP = starterHP
+opp_starter_attack = starter_attack
 
 
 print("Your getting your starter today.")
@@ -70,10 +70,30 @@ while your_turn == True:
         print("try agian.")
 
 print("Your starter uses",attack)
-print(opp_starterHP1)
+print(opp_name+"'s",opp_starter,"is at",opp_starterHP1)
 print(opp_name,"uses tackle")
 starterHP1 = starterHP - opp_starter_attack
-print(starterHP1)
+print("Your",starter,"is at",starterHP1)
+print("Your",starter,"can use tackle")
+your_turn1 = True
+attack1 = input("or leer")
+while your_turn == True:
+
+    if attack1 == "tackle":
+        opp_starterHP2 = opp_starterHP1 - starter_attack
+
+    elif attack1 == "leer":
+        opp_starter_attack - 2
+
+    else:
+        print("Try again")
+
+print(opp_name,opp_starter,"is at",opp_starterHP2)
+print(opp_starter_attack)
+
+    
+
+
 
 
 
