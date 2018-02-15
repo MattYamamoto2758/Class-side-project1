@@ -9,7 +9,7 @@ print("Your getting your starter today.")
 choose_name = True
 while choose_name:
     name = input("Whats your name. ")
-    confirm_name = input("So it's " + name + "?")
+    confirm_name = input("So it's " + name + "? ")
     if confirm_name == "yes":
         choose_name = False
     else:
@@ -22,7 +22,7 @@ print("He tells you that you can choose from Charmander,Squirtle,Bulbasaur.")
 first_chose = True
 while first_chose == True:
     
-    starter = input("Please choose.")
+    starter = input("Please choose. ")
 
     if starter == "Charmander":
         first_chose = False
@@ -74,27 +74,22 @@ print(opp_name+"'s",opp_starter,"is at",opp_starterHP1)
 print(opp_name,"uses tackle")
 starterHP1 = starterHP - opp_starter_attack
 print("Your",starter,"is at",starterHP1)
-print("Your",starter,"can use tackle")
-your_turn1 = True
-attack1 = input("or leer")
+your_turn = True
+attack = input ("You can use tackle and leer.")
 while your_turn == True:
 
-    if attack1 == "tackle":
-        opp_starterHP2 = opp_starterHP1 - starter_attack
+    if attack == "tackle":
+        opp_starterHP1 -= starter_attack
+        your_turn = False
 
-    elif attack1 == "leer":
+    elif attack == "leer":
         opp_starter_attack - 2
 
     else:
-        print("Try again")
+        print("try agian")
 
-print(opp_name,opp_starter,"is at",opp_starterHP2)
-print(opp_starter_attack)
-
-    
-
-
-
+if opp_starterHP >= 0 :
+    print("You win")
 
 
 
