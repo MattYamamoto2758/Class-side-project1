@@ -1,8 +1,17 @@
 starterHP = 23
 starter_attack = 10
+level = 5
 
 opp_starterHP = starterHP
 opp_starter_attack = starter_attack
+
+battle_counter = 0
+if battle_counter == 10:
+    starterHP += 2
+    starter_attack += 2
+    starter_level += 1
+
+
 
 
 print("Your getting your starter today.")
@@ -90,6 +99,15 @@ while your_turn == True:
 
 if opp_starterHP >= 0 :
     print("You win")
+    starterHP += 2
+    starter_attack += 2
+    level +=1
+print("Your",starter,"leveled up. Now it has",starterHP,"HP.")
+print("Its attack is also",starter_attack)
+print("Your",starter,"is now level",level)
+
+
+    
 
 
 
