@@ -105,6 +105,17 @@ if opp_starterHP >= 0 :
 print("Your",starter,"leveled up. Now it has",starterHP,"HP.")
 print("Its attack is also",starter_attack)
 print("Your",starter,"is now level",level)
+print("You should go to the next town, Adventure town.")
+town_ = True
+while town_ == True:
+    town = input("please choose.(next town or Adventure town) ")
+
+    if town == "next town":
+        town_ = False
+
+    elif town == "Adventure town":
+        town_ = False
+
 
 
     
