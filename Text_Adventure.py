@@ -11,7 +11,7 @@ if battle_counter == 5:
     starterHP += 2
     starter_attack += 2
     level += 1
-
+import time
 
 
 
@@ -32,15 +32,18 @@ print("He tells you that you can choose from Charmander, Squirtle, Bulbasaur.")
 first_chose = True
 while first_chose == True:
     
-    starter = input("Please choose. ")
+    starter1 = input("Please choose. ")
 
-    if starter == "Charmander":
+    if starter1.lower() == "charmander":
+        starter = "Charmander"
         first_chose = False
 
-    elif starter == "Squirtle":
+    elif starter1.lower() == "Squirtle":
+        starter = "Squirtle"
         first_chose = False
 
-    elif starter == "Bulbasaur":
+    elif starter1.lower() == "Bulbasaur":
+        starter = "Bulbasaur"
         first_chose = False
 
     else:
@@ -74,14 +77,14 @@ your_turn = True
 
 while your_turn == True:
     
-    attack = input ("You can also use leer. Please choose. ")
+    attack = input ("You can also use growl. Please choose. ")
 #turn one
     if attack == "tackle":
         opp_starterHP1 = opp_starterHP - starter_attack
         opp_starter_attack1 = opp_starter_attack + 0
         your_turn = False
         
-    elif attack == "leer":
+    elif attack == "growl":
         opp_starter_attack1 = opp_starter_attack - 2
         opp_starterHP1 = opp_starterHP
         your_turn = False
@@ -101,13 +104,13 @@ your_turn = True
 
 while your_turn == True:
 #turn 2    
-    attack = input ("You can use tackle and leer. ")
+    attack = input ("You can use tackle and growl. ")
 
     if attack == "tackle":
         opp_starterHP1 -= starter_attack
         your_turn = False
 
-    elif attack == "leer":
+    elif attack == "growl":
         opp_starter_attack1 -= 2
         opp_starterHP1 = opp_starterHP1 + 0
         your_turn = False
@@ -126,12 +129,12 @@ if opp_starterHP1 > 0:
 # turn 3    
     your_turn = True
     while your_turn == True:
-        attack = input("You can use leer or tackle. Which one will you use? ")
+        attack = input("You can use growl or tackle. Which one will you use? ")
         if attack == "tackle":
             opp_starterHP1 -= starter_attack
             your_turn = False
 
-        elif attack == "leer":
+        elif attack == "growl":
             opp_starter_attack -= 2
             your_turn = False
 
@@ -141,7 +144,7 @@ if opp_starterHP1 > 0:
 print("Your",starter,"uses",attack)
 print(opp_name+"'s",opp_starter,"is at",opp_starterHP1,"HP.")
 if opp_starterHP1 >= 0 :
-    print(opp_name+"'s",opp_starter,"uses leer")
+    print(opp_name+"'s",opp_starter,"uses growl")
     print(starter+"'s attack fell")
 # end of turn 3
 
@@ -150,12 +153,12 @@ if opp_starterHP1 >= 0 :
 elif opp_starterHP1 > 0:
     your_turn = True
     while your_turn == True: 
-        attack = input("You can use leer or tackle. ")
+        attack = input("You can use growl or tackle. ")
         if attack == "tackle":
             opp_starterHP1 -= starter_attack
             your_turn = False
 
-        elif attack == "leer":
+        elif attack == "growl":
             opp_starter_attack -= 2
             your_turn = False
 
@@ -202,9 +205,9 @@ while town_ == True:
         if town == "go home":
             if rare_candy < 1:
                 print("Your mom is very greatful that you said goodbye.")
-                print("Your mom gives you rare candy.")
-                rare_candy += 5
-                print("You have",rare_candy,"rare candies")
+                print("Your mom gives you a rare candy.")
+                rare_candy += 1
+                print("You have",rare_candy,"rare candy")
                 go_home = False
                 town = True
                 rare_candy1= input("Do you want to use the candy? ")
@@ -221,29 +224,6 @@ while town_ == True:
             else:
                 print("Fail")
 
-            rare_candy1 = True
-            while rare_candy1 == True:
-                
-
-                if rare_candy >= 0:
-                    rare_candy1 = input("Do you want to use another candy? ")
-                    if rare_candy1 == "yes" :
-                        starterHP +=2
-                        starter_attack += 1
-                        level += 1
-                        rare_candy -= 1
-                        print(starter,"leveled up.")
-                        print("You now have",rare_candy,"left")
-                    if rare_candy1 == "no":
-                        rare_candy = False
-
-                    if rare_candy == 0:
-                        rare_candy = False
-
-                    else:
-                        print("Try agian")
-
-                                    
         if town == "next town":
             go_home = False
             town_ = False
@@ -252,9 +232,8 @@ while town_ == True:
             go_home = False
             town_ = False
 
-        elif town== "go home":
-            print("Cool")
 
+        
         else:
             print("Try agian")
 
