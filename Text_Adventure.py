@@ -50,6 +50,12 @@ while first_chose == True:
         print("Try again")
 
 print("Good choice. Said the professor. I too like",starter)
+# Nick name
+nick_name = True
+while nick_name == True:
+    nickName = input("Do you want to give",starter,"a Nick name? 4")
+    if nickName.lower() == "yes":
+        nickname = input("What will it be then? ")
 
 if starter == "Charmander":
     opp_starter = "Squirtle"
