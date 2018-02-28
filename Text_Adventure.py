@@ -1,3 +1,5 @@
+import random
+
 starterHP = 23
 starter_attack = 10
 level = 5
@@ -12,9 +14,8 @@ if battle_counter == 5:
     starter_attack += 2
     level += 1
 import time
-
-
-
+ran = randint(1,3)
+print (ran)
 print("You are getting your starter today.")
 choose_name = True
 while choose_name:
@@ -53,9 +54,13 @@ print("Good choice. Said the professor. I too like",starter)
 # Nick name
 nick_name = True
 while nick_name == True:
-    nickName = input("Do you want to give",starter,"a Nick name? 4")
+    nickName = input("Do you want to give " + starter + " a Nick name? ")
     if nickName.lower() == "yes":
         nickname = input("What will it be then? ")
+        nick_name = False
+    elif nickName.lower() == "no":
+check = input ("So it's "+ nickname + " ? " )
+        
 
 if starter == "Charmander":
     opp_starter = "Squirtle"
