@@ -211,7 +211,7 @@ elif opp_starterHP1 <= 0:
   
 town_ = True
 while town_ == True:
-    town = input("Please choose.(next town or Adventure town) ")
+    town = input("Please choose.(next town or Adventure town) or go home for a treat!")
 
     go_home = True
     while go_home == True:
