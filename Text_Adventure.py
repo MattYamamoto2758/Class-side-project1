@@ -61,6 +61,9 @@ while nick_name == True:
         nickname = input("What will it be then? ")
         nick_name = False
     elif nickName.lower() == "no":
+        nick_name = False
+    else:
+        print("Try agian")
         print("That is ok")
 check = input ("So it's "+ nickname + " ? " )
         
@@ -96,6 +99,7 @@ while your_turn == True:
     if attack == "tackle":
         opp_starterHP1 = opp_starterHP - starter_attack
         opp_starter_attack1 = opp_starter_attack + 0
+        miss = random.randint(1,20)
         your_turn = False
         
     elif attack == "growl":
