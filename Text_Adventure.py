@@ -14,8 +14,7 @@ if battle_counter == 5:
     starter_attack += 2
     level += 1
 import time
-ran = randint(1,3)
-print (ran)
+
 print("You are getting your starter today.")
 choose_name = True
 while choose_name:
@@ -27,9 +26,11 @@ while choose_name:
         print("Please try again.")
 
 print("So",name,"you go to the lab to pick up your starter.")
+time.sleep(0.6)
 print("In the lab you see the professor.")
+time.sleep(0.6)
 print("He tells you that you can choose from Charmander, Squirtle, Bulbasaur.")
-
+time.sleep(0.6)
 first_chose = True
 while first_chose == True:
     
@@ -51,6 +52,7 @@ while first_chose == True:
         print("Try again")
 
 print("Good choice. Said the professor. I too like",starter)
+time.sleep(0.5)
 # Nick name
 nick_name = True
 while nick_name == True:
@@ -59,6 +61,7 @@ while nick_name == True:
         nickname = input("What will it be then? ")
         nick_name = False
     elif nickName.lower() == "no":
+        print("That is ok")
 check = input ("So it's "+ nickname + " ? " )
         
 
